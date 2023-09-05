@@ -2,12 +2,14 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="UserMapper">
-    <select id="selectAll" resultType="com.example.dao.User">
+<mapper namespace="com.example.mapper.UserMapper">
+    <resultMap id="lbw" type="lbwnb"></resultMap>
+
+    <select id="selectAll" resultMap="lbw">
         select * from user
     </select>
 
-    <select id="selectById" resultType="model.User">
+    <select id="selectById" resultMap="lbw">
         select  * from user where id=#{id}
     </select>
 </mapper>

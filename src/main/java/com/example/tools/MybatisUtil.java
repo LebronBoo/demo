@@ -12,7 +12,7 @@ public class MybatisUtil {
     private static SqlSessionFactory sqlSessionFactory;
     static {
         try {
-            sqlSessionFactory = new SqlSessionFactoryBuilder().build(new FileInputStream("mybatis-config.xml"));
+            sqlSessionFactory = new SqlSessionFactoryBuilder().build(new FileInputStream("src/main/resources/mybatis-config.xml"));
         }catch (FileNotFoundException e){
             e.printStackTrace();
         }
